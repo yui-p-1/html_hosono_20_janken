@@ -11,6 +11,10 @@ header{
 }
 main{
     border-bottom:1px solid #ccc;
+    /* width: 1024px; */
+  /* height: 720px; */
+  /* margin: auto; */
+  /* display:block; */
 }
 
 footer{
