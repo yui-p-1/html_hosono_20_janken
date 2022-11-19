@@ -14,11 +14,16 @@
 </header>
 
 <main>
+ <div class="flex">
   <span id="button">
-    <button onclick="R_Click(0);"><img src="../img/shiba_0.png">グー</button>
-    <button onclick="R_Click(1);"><img src="../img/shiba_1.png">チョキ</button>
-    <button onclick="R_Click(2);"><img src="../img/shiba_2.png">パー</button>
-  </span>
+    <ul>
+    <li><div class="box fadeUp"><button onclick="R_Click(0);"><img src="../img/shiba_0.png" width="300px">グー</button></div><li></li>
+    <li><div class="delay-time02 box fadeUp"><button onclick="R_Click(1);"><img src="../img/shiba_1.png" width="300px">チョキ</button></div></li>
+    <li><div class="delay-time04 box fadeUp"><button onclick="R_Click(2);"><img src="../img/shiba_2.png" width="300px">パー</button></div></li>
+    </ul></div>
+  
+  </span></div>
+
     <div id="Rejan1"></div>
     <div id="Rejan2"></div>
 
@@ -26,8 +31,9 @@
 
 <footer></footer>
 <script>
-        
+
     function R_Click(p_janken_r) {
+
         let janken = ['グー','チョキ','パー',];
         let janken_r = Math.floor( Math.random() * 3);
 
@@ -43,12 +49,14 @@
             }else {
                 Result_end = "あなたの【負け】";
             }
+ 
+            setTimeout(function(){document.getElementById("Rejan1").innerHTML = p_janken[p_janken_r] +"を選択しました。ジャンケンの結果は・・・？"}, 100);
+            setTimeout(function(){document.getElementById("Rejan2").innerHTML = "相手は" + janken[janken_r] + " " + Result_end}, 2000);
 
-            document.getElementById("Rejan1").innerHTML = p_janken[p_janken_r] +"を選択しました。ジャンケンの結果は・・・？";
-            document.getElementById("Rejan2").innerHTML = "相手は" + janken[janken_r] + Result_end;
         }
 
 </script>
+
 
 </body>
 </html>
