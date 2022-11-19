@@ -18,7 +18,7 @@
   <span id="button">
     <ul>
     <li><div class="box fadeUp"><button onclick="R_Click(0);"><img src="../img/shiba_0.png" width="300px">グー</button></div><li></li>
-    <li><div class="delay-time02 box fadeUp"><button onclick="R_Click(1);"><img src="../img/shiba_1.png" width="300px">チョキ</button></div></li>
+    <li><div id="delay-time02 box fadeUp"><button onclick="R_Click(1);"><img src="../img/shiba_1.png" width="300px">チョキ</button></div></li>
     <li><div class="delay-time04 box fadeUp"><button onclick="R_Click(2);"><img src="../img/shiba_2.png" width="300px">パー</button></div></li>
     </ul></div>
   
@@ -33,8 +33,7 @@
 <script>
 
     function R_Click(p_janken_r) {
-
-        let janken = ['グー','チョキ','パー',];
+        let janken = ['グー','チョキ','パー'];
         let janken_r = Math.floor( Math.random() * 3);
 
         let p_janken = ['グー','チョキ','パー'];
