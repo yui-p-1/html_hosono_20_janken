@@ -8,13 +8,13 @@
 <title>じゃんけん</title>
 </head>
 <body>
+
 <header>
   <h1>じゃんけんゲーム</h1>
 </header>
 
 <main>
-
-  <div class="flex">
+ <div class="flex">
   <span id="button">
     <ul>
     <li><div id="box fadeUp" class="box fadeUp"><button onclick="R_Click(0);"><img src="../img/shiba_1.png" width="300px">グー</button></div><li></li>
@@ -23,8 +23,9 @@
     <li><div hidden id="shiba_4"><img src="../img/shiba_4.png" width="300px"></div></li>
     <li><div hidden id="shiba_5"><img src="../img/shiba_5.png" width="300px"></div></li>
     <li><div hidden id="shiba_6"><img src="../img/shiba_6.png" width="300px"></div></li>
-    </ul></div>
 
+    </ul></div>
+  
   </span></div>
   
   <span id="Rejan">
@@ -33,7 +34,7 @@
   </span>
 
   <span id="aite">
-    <li><div id="delay-time03 box fadeUp"><img src="../img/kuroshiba_0.png" width="600px"></div></li>
+    <li><div id="delay-time03 box fadeUp" class="delay-time03 box fadeUp"><img src="../img/kuroshiba_0.png" width="600px"></div></li>
     <li><div hidden id="kuro_1"><img src="../img/kuroshiba_1.png" width="300px"></div></li>
     <li><div hidden id="kuro_2"><img src="../img/kuroshiba_2.png" width="300px"></div></li>
     <li><div hidden id="kuro_3"><img src="../img/kuroshiba_3.png" width="300px"></div></li>
@@ -51,7 +52,7 @@
 <footer></footer>
 
 <script>
-  
+    
     function R_Click(p_janken_r) {
             if (p_janken_r === 0) {
         document.getElementById("delay-time01 box fadeUp").style.display = "none";
@@ -107,11 +108,10 @@
                 Result_end = "あなたの負け";
             }
 
- 
+
             setTimeout(function(){document.getElementById("Rejan1").innerHTML = p_janken[p_janken_r] +"を選択しました。ジャンケンの結果は・・・？"}, 100);
             document.getElementById("delay-time03 box fadeUp").style.display = "none";
             
-
             setTimeout(function(){document.getElementById("Rejan2").innerHTML = "相手は" + janken[janken_r] + " " + Result_end}, 2000);
 
         }
@@ -121,6 +121,6 @@
         }
 
 </script>
+
 </body>
 </html>
-
