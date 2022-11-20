@@ -6,17 +6,20 @@ body{
 }
 header{
     background-color: #fff;
-    border-bottom: 1px solid #ccc;
+    /* border-bottom: 1px solid #ccc; */
     text-align: center;
 }
 main{
-    border-bottom:1px solid #ccc;
+    /* border-bottom:1px solid #ccc; */
     font-size: 32px;
+    text-align:center;
 }
 
 li {
     display: inline-block;
     }
+
+
 
 footer{
     background-color: #fff;
@@ -62,6 +65,14 @@ button:hover {
         transform: translateY(0);
         }
       }
+
+.retry_btn {
+  position:fixed;
+  right:50px;
+  bottom:50px;
+
+} 
+
       
 /* アニメーションスタートの遅延時間を決めるCSS*/
 .delay-time01{
@@ -76,3 +87,38 @@ button:hover {
     animation-delay: 4.5s;
     }
 
+    .buttonBox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .button {
+        color: black;
+        border: 1px solid #333;
+        width: calc(45% / 2);
+        text-align: center;
+        padding: 10px;
+        margin-right: 26px;
+      }
+      .button:last-child {
+        margin-right: 0;
+      }
+      .button:hover {
+        background-color:#6f4b3e;
+        color: #fff;
+        cursor: pointer;
+      }
+      .buttonBox .tab-active {
+        background-color: #6f4b3e;
+        color: #fff;
+      }
+      .contents {
+        width: 70%;
+        margin: 0 auto;
+      }
+      .tab-content {
+        text-align: center;
+      }
+      [id="tab2"] {
+        display: none;
+      }

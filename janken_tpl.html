@@ -7,11 +7,25 @@
 <link rel="stylesheet" href="css/sample.css">
 <title>じゃんけん</title>
 </head>
-<body>
 
-<header>
-  <h1>じゃんけんゲーム</h1>
-</header>
+<!-- 切り替えボタン -->
+<div class="buttonBox">
+    <a class="button tab-active" id="tab1_button">
+      しばいぬ
+    </a>
+    <a class="button" id="tab2_button">
+      工事中
+    </a>
+  </div>
+
+<!-- ケース別の表示・非表示 -->
+    <!-- tab1の場合 -->
+    <div class="contents" id="tab1">
+        <header><h1 class="tab-h3">じゃんけんゲーム</h1></header>
+        <div class="tab-content">
+
+
+<body>
 
 <main>
  <div class="flex">
@@ -41,18 +55,18 @@
     <li><div hidden id="kuro_4"><img src="../img/kuroshiba_4.png" width="300px"></div></li>
     <li><div hidden id="kuro_5"><img src="../img/kuroshiba_5.png" width="300px"></div></li>
     <li><div hidden id="kuro_6"><img src="../img/kuroshiba_6.png" width="300px"></div></li>
-  </span>
+  </span></br>
+
+  <span id="retry_btn">
+    <!-- <p style="font-size:32px; color:black; position:fixed;right:800px; bottom:90px;">カウンター：<span id="count">0</span></p> -->
+    <input type="button"  value=" もう一度 " onclick="koshin();count();" style="font-size:32px; color:black; position:fixed;right:800px; bottom:50px;">
+    </span>
    
-</main>
-
-   <span id="button2">
-   <input type="button"  value=" もう一度 " onclick="koshin()" style="font-size:32px; color:black; background-color:">
-   </span>
-
+</main> 
+   
 <footer></footer>
 
 <script>
-    
     function R_Click(p_janken_r) {
             if (p_janken_r === 0) {
         document.getElementById("delay-time01 box fadeUp").style.display = "none";
@@ -120,7 +134,72 @@
             location.reload();
         }
 
+        // function count(){
+        //     var thisCount = $("#count").html();
+        //     thisCount = Number(thisCount);
+        //     thisCount = thisCount + 1;
+        //     $("#count").html(thisCount);
+        // }
+
+        
+
 </script>
 
 </body>
 </html>
+
+</div>
+</div>
+
+<div class="contents" id="tab2">
+    <h3 class="tab-h3">
+      猫バージョン
+    </h3>
+    <div class="tab-content">
+      工事中
+    </div>
+  </div>
+
+<script>
+  // *******************************************
+  // ボタンやタブ切り替えによる表示・非表示の処理
+  // *******************************************
+  // ①ボタンを監視
+  $("#tab1_button").on("click", function () {
+    // ②状態をチェック
+    // tab1ボタンがアクティブかどうか
+    if ($("#tab1_button").hasClass("tab-active")) {
+      // アクティブなら何もしない
+    } else {
+      // ③表示・非表示の処理
+      // アクティブではない
+      // tab2を非表示
+      $("#tab2").hide();
+      $("#tab2_button").removeClass("tab-active");
+      // tab1を表示
+      $("#tab1").fadeIn();
+      $("#tab1_button").addClass("tab-active");
+    }
+  });
+  // ①ボタンを監視
+  $("#tab2_button").on("click", function () {
+    // ②状態をチェック
+    // tab2がアクティブかどうか
+    if ($("#tab2_button").hasClass("tab-active")) {
+      // アクティブなら何もしない
+    } else {
+      // ③表示・非表示の処理
+      // アクティブではない
+      // tab1を非表示
+      $("#tab1").hide();
+      $("#tab1_button").removeClass("tab-active");
+      // tab2を表示
+      $("#tab2").fadeIn();
+      $("#tab2_button").addClass("tab-active");
+    }
+  });
+
+  </script>
+
+
+
