@@ -63,16 +63,19 @@ button:hover {
       }
       
 /* アニメーションスタートの遅延時間を決めるCSS*/
-.delay-time02{
+.delay-time01{
     animation-delay: 1.5s;
     }
 
-.delay-time04{
+.delay-time02{
     animation-delay: 3.0s;
     }
 
     /* https://coco-factory.jp/ugokuweb/move02/4-10/ */
 
+.delay-time03{
+    animation-delay: 4.5s;
+    }
 
 
     
