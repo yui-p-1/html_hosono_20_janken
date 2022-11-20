@@ -8,13 +8,13 @@
 <title>じゃんけん</title>
 </head>
 <body>
-
 <header>
   <h1>じゃんけんゲーム</h1>
 </header>
 
 <main>
- <div class="flex">
+
+  <div class="flex">
   <span id="button">
     <ul>
     <li><div id="box fadeUp" class="box fadeUp"><button onclick="R_Click(0);"><img src="../img/shiba_1.png" width="300px">グー</button></div><li></li>
@@ -23,9 +23,8 @@
     <li><div hidden id="shiba_4"><img src="../img/shiba_4.png" width="300px"></div></li>
     <li><div hidden id="shiba_5"><img src="../img/shiba_5.png" width="300px"></div></li>
     <li><div hidden id="shiba_6"><img src="../img/shiba_6.png" width="300px"></div></li>
-
     </ul></div>
-  
+
   </span></div>
   
   <span id="Rejan">
@@ -52,7 +51,7 @@
 <footer></footer>
 
 <script>
-    
+  
     function R_Click(p_janken_r) {
             if (p_janken_r === 0) {
         document.getElementById("delay-time01 box fadeUp").style.display = "none";
@@ -122,7 +121,6 @@
         }
 
 </script>
-
 </body>
 </html>
 
