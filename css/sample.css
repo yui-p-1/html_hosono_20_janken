@@ -20,7 +20,7 @@ li {
 
 footer{
     background-color: #fff;
-    border-bottom:1px solid #ccc;
+    /* border-bottom:1px solid #ccc; */
     text-align: center;
 }
 
@@ -36,6 +36,7 @@ button{
 button:hover {
     transform: scale(1.15, 1.15);
 }
+
 
 /*スタート時は要素自体を透過0にするためのopacity:0;を指定する*/
 .box{
@@ -76,6 +77,10 @@ button:hover {
 .delay-time03{
     animation-delay: 4.5s;
     }
+
+
+
+
 
 
     
