@@ -17,21 +17,28 @@
  <div class="flex">
   <span id="button">
     <ul>
-    <li><div id="box fadeUp"><button onclick="R_Click(0);"><img src="../img/shiba_0.png" width="300px">グー</button></div><li></li>
-    <li><div id="delay-time02 box fadeUp"><button onclick="R_Click(1);"><img src="../img/shiba_1.png" width="300px">チョキ</button></div></li>
-    <li><div id="delay-time04 box fadeUp"><button onclick="R_Click(2);"><img src="../img/shiba_2.png" width="300px">パー</button></div></li>
+    <li><div class="box fadeUp"><button onclick="R_Click(0);"><img src="../img/shiba_1.png" width="300px">グー</button></div><li></li>
+    <li><div class="delay-time01 box fadeUp"><button onclick="R_Click(1);"><img src="../img/shiba_2.png" width="300px">チョキ</button></div></li>
+    <li><div class="delay-time02 box fadeUp"><button onclick="R_Click(2);"><img src="../img/shiba_3.png" width="300px">パー</button></div></li>
     </ul></div>
   
   </span></div>
-
+  
+  <span id="Rejan">
     <div id="Rejan1"></div>
     <div id="Rejan2"></div>
+  </span>
 
+  <span id="aite">
+    <li><div class="delay-time03 box fadeUp"><img src="../img/kuroshiba_0.png" width="600px"></div></li>
+  </span>
+   
 </main>
 
 <footer></footer>
-<script>
 
+<script>
+    
     function R_Click(p_janken_r) {
             if (p_janken_r === 0) {
         document.getElementById("delay-time02 box fadeUp").style.display = "none";
@@ -43,7 +50,7 @@
             }
             else if (p_janken_r === 2) {
         document.getElementById("box fadeUp").style.display = "none";        
-        document.getElementById("delay-time02 box fadeUp").style.display = "none";ｐ
+        document.getElementById("delay-time02 box fadeUp").style.display = "none";
             }
 
         let janken = ['グー','チョキ','パー'];
